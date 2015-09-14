@@ -19,6 +19,10 @@ body,html{
     font-size: 1.4em;
     line-height: 40px;
 }
+.nav-main .logo a{
+    color: #ffffff;
+    text-decoration: none;
+}
 
 .nav-main > ul{
     margin: 0;
@@ -42,7 +46,6 @@ body,html{
 .nav-item:focus{
     background: #444;
 }
-
 
 .nav-content{
     position: absolute;
