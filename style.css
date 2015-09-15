@@ -1,7 +1,7 @@
 body,html{
     margin: 0;
     padding: 0;
-    font: 1em "Open Sans", sans-serif;
+    font: 1em 'Ubuntu', sans-serif;
 }
 .content{
     padding: 30px;
@@ -47,12 +47,14 @@ body,html{
     background: #444;
 }
 
+
 .nav-content{
     position: absolute;
     top: 70px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     background-color: #222222;
-    max-height: 0;
+    /*max-height: 0;*/
+    display: none;
 }
 
 .nav-content a{
@@ -76,8 +78,14 @@ body,html{
     display: inline-block;
     padding: 5px 0;
 }
-
+/*
 .nav-item:focus ~ .nav-content{
     max-height: 400px;
     transition:max-height 0.4s ease-in;
+}*/
+
+.nav-main > ul>li:hover .nav-content{
+    display: block;
+    transition:max-height 0.4s ease-in;
 }
+
