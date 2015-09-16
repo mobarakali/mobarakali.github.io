@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Horizantal Menu</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            background: #abc;
+            padding: 50px;
+            font-size: 1em;
+        }
+        h1{
+            text-align: center;
+            border-bottom: 2px solid #009;
+            margin-bottom: 50px;
+        }
+        ul#navmenu,
+        ul.sub1,
+        ul.sub2{
+            list-style-type: none;
+        }
+        ul#navmenu >li{
+            float: left;
+            width: 125px;
+            text-align: center;
+            position: relative;
+            margin-right: 4px;
+        }
+
+        ul#navmenu a{
+            background: #ffffff;
+            display: block;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            height: 25px;
+            text-decoration: none;
+            width: 125px;
+            line-height: 25px;
+            border:1px solid #cccccc;
+            color: #000000;
+            font-size: .9rem;
+        }
+        ul#navmenu li:hover > a{
+            background: yellowgreen;
+        }
+        ul#navmenu li:hover > a:hover{
+            background:greenyellow ;
+        }
+        ul#navmenu .sub1 a{
+            margin-top: 3px;
+        }
+        ul#navmenu .sub2 a{
+            margin-left: 3px;
+        }
+        ul#navmenu ul.sub1{
+            position: relative;
+            display: none;
+        }
+        ul#navmenu ul.sub2 {
+            display: none;
+            position: relative;
+            top: -30px;
+            left: 126px;
+        }
+        ul.sub1 li{
+            border:1px solid red;
+        }
+        ul#navmenu li:hover .sub1,
+        ul#navmenu .sub1 li:hover .sub2{
+            display: block;
+        }
+        .arrow{
+            position: absolute;
+            top: 8px;
+            right: 4px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<h1>Navigation Menu</h1>
+<ul id="navmenu">
+    <li><a href="#">hyperlink 1</a></li>
+    <li>
+        <a href="#">hyperlink 2</a> <i class="arrow fa fa-arrow-down"></i>
+        <ul class="sub1">
+            <li><a href="#">hyperlink 2.1</a></li>
+            <li><a href="#">hyperlink 2.2</a></li>
+            <li><a href="#">hyperlink 2.3</a></li>
+        </ul>
+    </li>
+    <li><a href="#">hyperlink 3</a></li>
+    <li>
+        <a href="#">hyperlink 4</a><i class="arrow fa fa-arrow-down"></i>
+        <ul class="sub1">
+            <li><a href="#">hyperlink 4.1</a></li>
+            <li><a href="#">hyperlink 4.2</a></li>
+            <li>
+                <a href="#">hyperlink 4.3</a><i class="arrow fa fa-arrow-right"></i>
+                <ul class="sub2">
+                    <li><a href="#">hyperlink 4.3.1</a></li>
+                    <li><a href="#">hyperlink 4.3.2</a></li>
+                    <li><a href="#">hyperlink 4.3.3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#">hyperlink 5</a></li>
+</ul>
+
+</body>
+</html>
