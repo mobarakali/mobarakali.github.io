@@ -1,0 +1,19 @@
+.features .glyphicon{
+    font-size: 32px;
+    color: gray;
+    padding: 30px 0;
+}
+
+.footer{
+    background-color: #333;
+    color: #ffffff;
+
+}
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #efefef;
+    padding: 30px 0;
+}
