@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Play with Hex color value!</title>
+    <style>
+        .set{
+            width: 100%;
+            overflow: hidden;
+        }
+        .cell{
+            float: left;
+            padding: 10px;
+            margin: 5px;
+            width: 31px;
+            height: 20px;
+        }
+        .white{
+            color:#fff;
+            font-weight: bolder;
+        }
+        .set.white p{
+            color: #000;
+            border-bottom: 1px solid black;
+            margin-bottom: 5px;
+            padding-bottom: 5px;
+            text-align: center;
+            }
+
+        /* Red value*/
+        .c-000{background:#000;}
+        .c-100{background:#100;}
+        .c-200{background:#200;}
+        .c-300{background:#300;}
+        .c-400{background:#400;}
+        .c-500{background:#500;}
+        .c-600{background:#600;}
+        .c-700{background:#700;}
+        .c-800{background:#800;}
+        .c-900{background:#900;}
+        .c-a00{background:#a00;}
+        .c-b00{background:#b00;}
+        .c-c00{background:#c00;}
+        .c-d00{background:#d00;}
+        .c-e00{background:#e00;}
+        .c-f00{background:#f00;}
+
+
+
+        /* Green value*/
+        .c-000{background:#000;}
+        .c-010{background:#010;}
+        .c-020{background:#020;}
+        .c-030{background:#030;}
+        .c-040{background:#040;}
+        .c-050{background:#050;}
+        .c-060{background:#060;}
+        .c-070{background:#070;}
+        .c-080{background:#080;}
+        .c-090{background:#090;}
+        .c-0a0{background:#0a0;}
+        .c-0b0{background:#0b0;}
+        .c-0c0{background:#0c0;}
+        .c-0d0{background:#0d0;}
+        .c-0e0{background:#0e0;}
+        .c-0f0{background:#0f0;}
+
+        /* blue value*/
+        .c-000{background:#000;}
+        .c-001{background:#001;}
+        .c-002{background:#002;}
+        .c-003{background:#003;}
+        .c-004{background:#004;}
+        .c-005{background:#005;}
+        .c-006{background:#006;}
+        .c-007{background:#007;}
+        .c-008{background:#008;}
+        .c-009{background:#009;}
+        .c-00a{background:#00a;}
+        .c-00b{background:#00b;}
+        .c-00c{background:#00c;}
+        .c-00d{background:#00d;}
+        .c-00e{background:#00e;}
+        .c-00f{background:#00f;}
+
+        /* Yellow = Red + Green value*/
+        .c-000{background:#000;}
+        .c-110{background:#110;}
+        .c-220{background:#220;}
+        .c-330{background:#330;}
+        .c-440{background:#440;}
+        .c-550{background:#550;}
+        .c-660{background:#660;}
+        .c-770{background:#770;}
+        .c-880{background:#880;}
+        .c-990{background:#990;}
+        .c-aa0{background:#aa0;}
+        .c-bb0{background:#bb0;}
+        .c-cc0{background:#cc0;}
+        .c-dd0{background:#dd0;}
+        .c-ee0{background:#ee0;}
+        .c-ff0{background:#ff0;}
+
+        /* Magenta = Red + Blue value*/
+        .c-000{background:#000;}
+        .c-101{background:#101;}
+        .c-202{background:#202;}
+        .c-303{background:#303;}
+        .c-404{background:#404;}
+        .c-505{background:#505;}
+        .c-606{background:#606;}
+        .c-707{background:#707;}
+        .c-808{background:#808;}
+        .c-909{background:#909;}
+        .c-a0a{background:#a0a;}
+        .c-b0b{background:#b0b;}
+        .c-c0c{background:#c0c;}
+        .c-d0d{background:#d0d;}
+        .c-e0e{background:#e0e;}
+        .c-f0f{background:#f0f;}
+
+        /* Cyne = Green + Blue value*/
+        .c-000{background:#000;}
+        .c-011{background:#011;}
+        .c-022{background:#022;}
+        .c-033{background:#033;}
+        .c-044{background:#044;}
+        .c-055{background:#055;}
+        .c-066{background:#066;}
+        .c-077{background:#077;}
+        .c-088{background:#088;}
+        .c-099{background:#099;}
+        .c-0aa{background:#0aa;}
+        .c-0bb{background:#0bb;}
+        .c-0cc{background:#0cc;}
+        .c-0dd{background:#0dd;}
+        .c-0ee{background:#0ee;}
+        .c-0ff{background:#0ff;}
+
+
+        /* White = Red + Green + Blue value*/
+        .c-000{background:#000;}
+        .c-111{background:#111;}
+        .c-222{background:#222;}
+        .c-333{background:#333;}
+        .c-444{background:#444;}
+        .c-555{background:#555;}
+        .c-666{background:#666;}
+        .c-777{background:#777;}
+        .c-888{background:#888;}
+        .c-999{background:#999;}
+        .c-aaa{background:#aaa;}
+        .c-bbb{background:#bbb;}
+        .c-ccc{background:#ccc;}
+        .c-ddd{background:#ddd;}
+        .c-eee{background:#eee;}
+        .c-fff{background:#fff;}
+
+
+        /* Custom "d00" value*/
+        .c-d00{background:#d00;}
+        .c-d11{background:#d11;}
+        .c-d22{background:#d22;}
+        .c-d33{background:#d33;}
+        .c-d44{background:#d44;}
+        .c-d55{background:#d55;}
+        .c-d66{background:#d66;}
+        .c-d77{background:#d77;}
+        .c-d88{background:#d88;}
+        .c-d99{background:#d99;}
+        .c-daa{background:#daa;}
+        .c-dbb{background:#dbb;}
+        .c-dcc{background:#dcc;}
+        .c-ddd{background:#ddd;}
+        .c-dee{background:#dee;}
+        .c-dff{background:#dff;}
+
+
+
+        /* Custom "d0d" value*/
+        .c-d0d{background:#d0d;}
+        .c-d1d{background:#d1d;}
+        .c-d2d{background:#d2d;}
+        .c-d3d{background:#d3d;}
+        .c-d4d{background:#d4d;}
+        .c-d5d{background:#d5d;}
+        .c-d6d{background:#d6d;}
+        .c-d7d{background:#d7d;}
+        .c-d8d{background:#d8d;}
+        .c-d9d{background:#d9d;}
+        .c-dad{background:#dad;}
+        .c-dbd{background:#dbd;}
+        .c-dcd{background:#dcd;}
+        .c-ddd{background:#ddd;}
+        .c-ded{background:#ded;}
+        .c-dfd{background:#dfd;}
+
+        /* Custom "0dd" value*/
+        .c-1dd{background:#1dd;}
+        .c-0dd{background:#0dd;}
+        .c-2dd{background:#2dd;}
+        .c-3dd{background:#3dd;}
+        .c-4dd{background:#4dd;}
+        .c-5dd{background:#5dd;}
+        .c-6dd{background:#6dd;}
+        .c-7dd{background:#7dd;}
+        .c-8dd{background:#8dd;}
+        .c-9dd{background:#9dd;}
+        .c-add{background:#add;}
+        .c-bdd{background:#bdd;}
+        .c-cdd{background:#cdd;}
+        .c-ddd{background:#ddd;}
+        .c-edd{background:#edd;}
+        .c-fdd{background:#fdd;}
+
+
+    </style>
+</head>
+<body>
+<div class="set white">
+    <p>Red Shade</p>
+    <div class="cell c-000">#000</div>
+    <div class="cell c-100">#100</div>
+    <div class="cell c-200">#200</div>
+    <div class="cell c-300">#300</div>
+    <div class="cell c-400">#400</div>
+    <div class="cell c-500">#500</div>
+    <div class="cell c-600">#600</div>
+    <div class="cell c-700">#700</div>
+    <div class="cell c-800">#800</div>
+    <div class="cell c-900">#900</div>
+    <div class="cell c-a00">#a00</div>
+    <div class="cell c-b00">#b00</div>
+    <div class="cell c-c00">#c00</div>
+    <div class="cell c-d00">#d00</div>
+    <div class="cell c-e00">#e00</div>
+    <div class="cell c-f00">#f00</div>
+</div>
+
+
+<div class="set white">
+    <p>Green Shade</p>
+    <div class="cell c-000">#000</div>
+    <div class="cell c-010">#010</div>
+    <div class="cell c-020">#020</div>
+    <div class="cell c-030">#030</div>
+    <div class="cell c-040">#040</div>
+    <div class="cell c-050">#050</div>
+    <div class="cell c-060">#060</div>
+    <div class="cell c-070">#070</div>
+    <div class="cell c-080">#080</div>
+    <div class="cell c-090">#090</div>
+    <div class="cell c-0a0">#0a0</div>
+    <div class="cell c-0b0">#0b0</div>
+    <div class="cell c-0c0">#0c0</div>
+    <div class="cell c-0d0">#0d0</div>
+    <div class="cell c-0e0">#0e0</div>
+    <div class="cell c-0f0">#0f0</div>
+</div>
+
+<div class="set white">
+    <p>Blue Shade</p>
+    <div class="cell c-000">#000</div>
+    <div class="cell c-001">#001</div>
+    <div class="cell c-002">#002</div>
+    <div class="cell c-003">#003</div>
+    <div class="cell c-004">#004</div>
+    <div class="cell c-005">#005</div>
+    <div class="cell c-006">#006</div>
+    <div class="cell c-007">#007</div>
+    <div class="cell c-008">#008</div>
+    <div class="cell c-009">#009</div>
+    <div class="cell c-00a">#00a</div>
+    <div class="cell c-00b">#00b</div>
+    <div class="cell c-00c">#00c</div>
+    <div class="cell c-00d">#00d</div>
+    <div class="cell c-00e">#00e</div>
+    <div class="cell c-00f">#00f</div>
+</div>
+
+
+<div class="set white">
+    <p>Yellow (Red + Green)  Shade</p>
+    <div class="cell c-000">#000</div>
+    <div class="cell c-110">#110</div>
+    <div class="cell c-220">#220</div>
+    <div class="cell c-330">#330</div>
+    <div class="cell c-440">#440</div>
+    <div class="cell c-550">#550</div>
+    <div class="cell c-660">#660</div>
+    <div class="cell c-770">#770</div>
+    <div class="cell c-880">#880</div>
+    <div class="cell c-990">#990</div>
+    <div class="cell c-aa0">#aa0</div>
+    <div class="cell c-bb0">#bb0</div>
+    <div class="cell c-cc0">#cc0</div>
+    <div class="cell c-dd0">#dd0</div>
+    <div class="cell c-ee0">#ee0</div>
+    <div class="cell c-ff0">#ff0</div>
+</div>
+<div class="set white">
+    <p>Magenta (Red + Blue)  Shade</p>
+    <div class="cell c-000">#000</div>
+    <div class="cell c-101">#101</div>
+    <div class="cell c-202">#202</div>
+    <div class="cell c-303">#303</div>
+    <div class="cell c-404">#404</div>
+    <div class="cell c-505">#505</div>
+    <div class="cell c-606">#606</div>
+    <div class="cell c-707">#707</div>
+    <div class="cell c-808">#808</div>
+    <div class="cell c-909">#909</div>
+    <div class="cell c-a0a">#a0a</div>
+    <div class="cell c-b0b">#b0b</div>
+    <div class="cell c-c0c">#c0c</div>
+    <div class="cell c-d0d">#d0d</div>
+    <div class="cell c-e0e">#e0e</div>
+    <div class="cell c-f0f">#f0f</div>
+</div>
+<div class="set white">
+    <p> Cyne (Green + Blue)  Shade</p>
+    <div class="cell c-000">#000</div>
+    <div class="cell c-011">#011</div>
+    <div class="cell c-022">#022</div>
+    <div class="cell c-033">#033</div>
+    <div class="cell c-044">#044</div>
+    <div class="cell c-055">#055</div>
+    <div class="cell c-066">#066</div>
+    <div class="cell c-077">#077</div>
+    <div class="cell c-088">#088</div>
+    <div class="cell c-099">#099</div>
+    <div class="cell c-0aa">#0aa</div>
+    <div class="cell c-0bb">#0bb</div>
+    <div class="cell c-0cc">#0cc</div>
+    <div class="cell c-0dd">#0dd</div>
+    <div class="cell c-0ee">#0ee</div>
+    <div class="cell c-0ff">#0ff</div>
+</div>
+<div class="set white">
+    <p> White (Red + Green + Blue)  Shade</p>
+    <div class="cell c-000">#000</div>
+    <div class="cell c-111">#111</div>
+    <div class="cell c-222">#222</div>
+    <div class="cell c-333">#333</div>
+    <div class="cell c-444">#444</div>
+    <div class="cell c-555">#555</div>
+    <div class="cell c-666">#666</div>
+    <div class="cell c-777">#777</div>
+    <div class="cell c-888">#888</div>
+    <div class="cell c-999">#999</div>
+    <div class="cell c-aaa">#aaa</div>
+    <div class="cell c-bbb">#bbb</div>
+    <div class="cell c-ccc">#ccc</div>
+    <div class="cell c-ddd">#ddd</div>
+    <div class="cell c-eee">#eee</div>
+    <div class="cell c-fff">#fff</div>
+</div>
+
+<div class="set white">
+    <p> White (Red + Green + Blue)  Shade</p>
+    <div class="cell c-000">#000</div>
+    <div class="cell c-111">#111</div>
+    <div class="cell c-222">#222</div>
+    <div class="cell c-333">#333</div>
+    <div class="cell c-444">#444</div>
+    <div class="cell c-555">#555</div>
+    <div class="cell c-666">#666</div>
+    <div class="cell c-777">#777</div>
+    <div class="cell c-888">#888</div>
+    <div class="cell c-999">#999</div>
+    <div class="cell c-aaa">#aaa</div>
+    <div class="cell c-bbb">#bbb</div>
+    <div class="cell c-ccc">#ccc</div>
+    <div class="cell c-ddd">#ddd</div>
+    <div class="cell c-eee">#eee</div>
+    <div class="cell c-fff">#fff</div>
+</div>
+<hr>
+<hr>
+<hr>
+<div class="set white">
+    <p> White (Red + Green + Blue)  Shade</p>
+    <div class="cell c-d00">#d00</div>
+    <div class="cell c-d11">#d11</div>
+    <div class="cell c-d22">#d22</div>
+    <div class="cell c-d33">#d33</div>
+    <div class="cell c-d44">#d44</div>
+    <div class="cell c-d55">#d55</div>
+    <div class="cell c-d66">#d66</div>
+    <div class="cell c-d77">#d77</div>
+    <div class="cell c-d88">#d88</div>
+    <div class="cell c-d99">#d99</div>
+    <div class="cell c-daa">#daa</div>
+    <div class="cell c-dbb">#dbb</div>
+    <div class="cell c-dcc">#dcc</div>
+    <div class="cell c-ddd">#ddd</div>
+    <div class="cell c-dee">#dee</div>
+    <div class="cell c-dff">#dff</div>
+</div>
+<div class="set white">
+    <p> White (Red + Green + Blue)  Shade</p>
+    <div class="cell c-d0d">#d0d</div>
+    <div class="cell c-d1d">#d1d</div>
+    <div class="cell c-d2d">#d2d</div>
+    <div class="cell c-d3d">#d3d</div>
+    <div class="cell c-d4d">#d4d</div>
+    <div class="cell c-d5d">#d5d</div>
+    <div class="cell c-d6d">#d6d</div>
+    <div class="cell c-d7d">#d7d</div>
+    <div class="cell c-d8d">#d8d</div>
+    <div class="cell c-d9d">#d9d</div>
+    <div class="cell c-dad">#dad</div>
+    <div class="cell c-dbd">#dbd</div>
+    <div class="cell c-dcd">#dcd</div>
+    <div class="cell c-ddd">#ddd</div>
+    <div class="cell c-ded">#ded</div>
+    <div class="cell c-dfd">#dfd</div>
+</div>
+<div class="set white">
+    <p> White (Red + Green + Blue)  Shade</p>
+    <div class="cell c-1dd">#1dd</div>
+    <div class="cell c-0dd">#0dd</div>
+    <div class="cell c-2dd">#2dd</div>
+    <div class="cell c-3dd">#3dd</div>
+    <div class="cell c-4dd">#4dd</div>
+    <div class="cell c-5dd">#5dd</div>
+    <div class="cell c-6dd">#6dd</div>
+    <div class="cell c-7dd">#7dd</div>
+    <div class="cell c-8dd">#8dd</div>
+    <div class="cell c-9dd">#9dd</div>
+    <div class="cell c-add">#add</div>
+    <div class="cell c-bdd">#bdd</div>
+    <div class="cell c-cdd">#cdd</div>
+    <div class="cell c-ddd">#ddd</div>
+    <div class="cell c-edd">#edd</div>
+    <div class="cell c-fdd">#fdd</div>
+</div>
+
+</body>
+</html>
