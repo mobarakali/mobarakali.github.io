@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Gmail style labels</title>
+    <style>
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            color: #ffffff;
+            margin: 1px;
+            padding: 1px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            float: left;
+            font-weight: 100;
+            line-height: 13px;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .lightblue{
+            background-color: lightblue;
+        }
+        .brown{
+            background-color: brown;
+        }
+        .olive{
+            background-color: olive;
+        }
+        .pink{
+            background-color: pink;
+        }
+        .green{
+            background-color: green;
+        }
+        .violet{
+            background-color: violet;
+        }
+        .orange{
+            background-color: orange;
+        }
+        .turk{
+            background-color: #8FCDB6;;
+        }
+        .red{
+            background-color: red;
+        }
+        .lime{
+            background-color: lime;
+        }
+        .darkblue{
+            background-color: darkblue;}
+        .autumn{
+            background-color: #B24700;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+        .purple{
+            background-color: purple;
+        }
+        .frost{
+            background-color: #80C8FE;
+        }
+        .black{
+            background-color: black;
+        }
+
+        ul.labels li a:link {
+            /*
+            background-image: url("images/labelx.gif");
+            background-position: left top;
+            background-repeat: no-repeat;
+            */
+            width: 13px;
+            height: 12px;
+            display: block;
+            border-left: 1px solid #fff;
+            margin-left: 3px;
+            float: right;
+            text-decoration: none;
+            color: #ffffff;
+        }
+       ul.labels li a:hover {
+           background-color: #ffffff;
+           color: #000;
+           /*
+           border-left: 1px solid transparent;
+           background-image: url("images/labelx_hover.gif");
+           */
+        }
+
+        ul.labels li a:link::after,
+        ul.labels li a:hover::after{
+            content: "X";
+            line-height:12px;
+            padding-left: 2px;
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+<h1>CSS Gmail style labels</h1>
+<!--re coded following html5 rules-->
+<img src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/uploads/2009/08/labels.png" alt="">
+
+<ul class="labels">
+    <li class="blue"><span>blue label</span><a href="#"></a></li>
+    <li class="lightblue"><span>light blue label</span><a href="#"></a></li>
+    <li class="brown"><span>brown label</span><a href="#"></a></li>
+    <li class="olive"><span>olive label</span><a href="#"></a></li>
+    <li class="pink"><span>pink label</span><a href="#"></a></li>
+    <li class="green"><span>green label</span><a href="#"></a></li>
+    <li class="violet"><span>violet label</span><a href="#"></a></li>
+    <li class="orange"><span>orange label</span><a href="#"></a></li>
+    <li class="turk"><span>turkoise label</span><a href="#"></a></li>
+    <li class="red"><span>red label</span><a href="#"></a></li>
+    <li class="lime"><span>lime label</span><a href="#"></a></li>
+    <li class="darkblue"><span>dark blue label</span><a href="#"></a></li>
+    <li class="autumn"><span>autumn label</span><a href="#"></a></li>
+    <li class="yellow"><span>yellow label</span><a href="#"></a></li>
+    <li class="purple"><span>purple label</span><a href="#"></a></li>
+    <li class="frost"><span>frost label</span><a href="#"></a></li>
+    <li class="black"><span>black label</span><a href="#"></a></li>
+</ul>
+
+</body>
+</html>
