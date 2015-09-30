@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cool CSS-only registration form</title>
+    <style>
+        .myform form{
+            width: 220px;
+            background-color: #000;
+            padding: 10px 12px;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+            color:#fff;
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: bold;
+            font-family: "Century Gothic", sans-serif;
+            box-sizing: border-box;
+        }
+        .myform input, .myform select{
+            margin: 3px auto 0;
+            border: 0;
+            height: 20px;
+            display: block;
+            width: 100%;
+            font-weight: bold;
+        }
+        .myform input{
+            padding-left: 2px;
+        }
+
+        .myform input:focus{
+            background-color: orange;
+        }
+        .myform form label{
+            margin: 5px auto 0;
+            background: transparent;
+            width: 195px;
+            display: block;
+        }
+
+        .myform .error{
+            font-size: 9px;
+            color: orange;
+            text-align: right;
+            display: block;
+            margin: 0 auto;
+            text-transform: none;
+        }
+        .myform .register_button{
+            width: 149px;
+            height: 40px;
+            background-color: orange;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            margin: 15px auto;
+            text-align: center;
+            cursor: pointer;
+            font-weight: normal;
+            font-size: 28px;
+            font-family: "Impact", serif;
+            line-height: 40px;
+        }
+        .register_button span a{
+            text-decoration: none;
+            color: white;
+        }
+        .register_button span a:hover{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<h1>Cool CSS-only registration form</h1>
+<!--re coded following html5 rules-->
+<img style="float:right;" src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/uploads/2009/08/registration.png" alt="">
+
+
+<div class="myform">
+    <form>
+        <label for="email-1">Your email</label>
+        <input id="email-1" type="text">
+        <p class="error"><span>This email exists already in the database</span></p>
+
+        <label for="password-1">Password</label>
+        <input id="password-1" type="text">
+        <p class="error"><span>At least 8 characters</span></p>
+
+        <label for="password-2">Password [repeat]</label>
+        <input id="password-2" type="text">
+        <p class="error"><span>Some text here</span></p>
+
+        <label for="birth-Day">Year of Birth</label>
+        <input id="birth-Day" type="text">
+        <p class="error"><span>Some text here</span></p>
+
+        <label for="country-1">Country</label>
+        <select id="country-1" name="country">
+            <option>Country 1</option>
+            <option>Country 2</option>
+        </select>
+
+        <div class="register_button"><span><a href="#">REGISTER</a></span></div>
+
+    </form>
+</div> <!--myform-->
+
+</body>
+</html>

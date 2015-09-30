@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>August 27, 2009: Simple CSS chart for dynamic content</title>
+    <style>
+        .container{
+            width: 300px;
+            line-height: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .record{
+            float: left;
+            width: 100%;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+            margin-bottom: 2px;
+            -webkit-border-radius: 0 10px 10px 0;
+            -moz-border-radius: 0 10px 10px 0;
+            border-radius: 0 10px 10px 0;
+            font-size: 12px;
+            font-weight: bold;
+            overflow: hidden;
+
+        }
+        .bar{
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4e391+0,61c419+50,b4e391+100;Green+3D */
+            background: #b4e391; /* Old browsers */
+            background: -moz-linear-gradient(top,  #b4e391 0%, #61c419 50%, #b4e391 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4e391), color-stop(50%,#61c419), color-stop(100%,#b4e391)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #b4e391 0%,#61c419 50%,#b4e391 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4e391', endColorstr='#b4e391',GradientType=0 ); /* IE6-9 */
+            float: left;
+            clear: left;
+            padding: 2px;
+        }
+        .bar span{
+            color: #003300;
+            margin-left: 5px;
+        }
+        .p{
+            /*float: right;*/
+            color: #6D8591;
+            clear: right;
+            line-height: 30px;
+            height: 30px;
+           /* background: rgba(0, 200, 200, .25);*/
+            padding: 2px;
+            position: relative;
+        }
+        .p span{
+            float: left;
+           /* margin-right: 5px;*/
+            position: absolute;
+            right: 5px;
+
+        }
+
+    </style>
+</head>
+<body>
+<h1>Simple CSS chart for dynamic content</h1>
+
+<div class="container">
+    <div class="record">
+        <div class="bar" style="width:55%;"><span>Mozilla</span></div>
+        <div class="p"><span>55%</span></div>
+    </div>
+    <div class="record">
+        <div class="bar" style="width:100%;"><span>IE</span></div>
+        <div class="p"><span>100%</span></div>
+    </div>
+    <div class="record">
+        <div class="bar" style="width:22%;"><span>Safari</span></div>
+        <div class="p"><span>22%</span></div>
+    </div>
+    <div class="record">
+        <div class="bar" style="width:20%;"><span>Opera</span></div>
+        <div class="p"><span>20%</span></div>
+    </div>
+</div>
+</body>
+</html>
