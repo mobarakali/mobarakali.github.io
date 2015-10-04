@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20 fresh and colorful CSS3 buttons</title>
+    <style>
+        div.container {
+            background-color: silver;
+            margin: 50px auto;
+            width: 75%;
+            min-width: 300px;
+            padding: 25px;
+            border-radius: 5px;
+            border:2px solid #888 ;
+        }
+        .button{
+            padding:5px 15px;
+            text-decoration: none;
+            display: inline-block;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            border-bottom: 1px solid rgba(0,0,0,0.25);
+            font-family: "Lucida Grande",Lucida,Verdana,sans-serif;
+            outline:none;
+            position:relative;
+            font-size: 32px;
+            margin:10px;
+            background:transparent url(images/buttonover.png) repeat-x top left;
+            white-space:nowrap;
+        }
+        .button:hover{
+            background-color: #777;
+        }
+        .button:active{
+            top: 1px;
+            left:1px;
+        }
+        .shadow{
+            background-color: #a3a3a3;
+            border: 2px solid #777;
+            color: #FFF;
+            font-weight:bold;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.8);
+        }
+        .engraved{
+            background: #666;
+            border: 2px solid #777;
+            color: #000;
+            text-shadow: 0 1px 1px #fff;
+            font-weight: bold;
+        }
+        .glow{
+            color: #fff;
+            background: #888;
+            border: 2px solid #777;
+            text-shadow: 1px 1px 6px #fff;
+        }
+        .white{
+            color: #fff;
+            background: #fff;
+            text-shadow: 1px 1px 4px #000;
+            border: 2px solid #f0f0f0;
+            font-family:Arial, sans-serif;
+            font-weight:bold;
+            text-transform:uppercase;
+            letter-spacing:-1px;
+        }
+        .white:hover{
+            background-color:#f1f1f1;
+        }
+        .red{
+            background-color: #B00000;
+            border: 1px solid #7F0000;
+            color: #FFF;
+            text-shadow: 1px 1px 4px #000;
+            font-family: "Palatino Linotype", sans-serif;
+        }
+        .red:hover{
+            background-color:#800000;
+        }
+
+        .lightblue{
+            background-color: #7FB0F0;
+            color: #FFF;
+            text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+            font-weight:100;
+        }
+        .lightblue:hover{
+            background-color:#7FA0C0;
+        }
+        .olive{
+            background-color: #B0E000;
+            border: 1px outset #D0E000;
+            color: #FFF;
+            font-style:italic;
+            text-shadow: 0 2px 1px rgba(0,0,0,0.2);
+        }
+        .olive:hover{
+            background-color: #90A000;
+        }
+        .orange{
+            background-color: #FFCC00;
+            border: 1px outset #F2FF00;
+            color: #FFF;
+            font-family:Helvetica, sans-serif;
+            font-weight:bold;
+        }
+        .orange:hover{
+            background-color: #FF8000;
+        }
+        .pink{
+            background-color: #C0107F;
+            border: 1px outset #70107F;
+            color: #FFF;
+            font-family:"Georgia",sans-serif;
+            font-weight:bold;
+        }
+        .pink:hover{
+            background-color: #F0107F;
+        }
+        .pink:active{
+            border: 1px inset #70107F;
+        }
+        .sea{
+            background-color: #20807F;
+            color: #FFF;
+        }
+        .sea:hover{
+            background-color: #60807F;
+        }
+        .rose{
+            background-color: #F07FD0;
+            color: #FFF;
+            font-family: "Palatino Linotype", sans-serif;
+            font-style: italic;
+            letter-spacing:-1px;
+            text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.4);
+        }
+        .rose:hover{
+            background-color: #B07FA0;
+        }
+        .black{
+            background: #000 url(images/buttonover2.png);
+            color: #FFF;
+            letter-spacing:-1px;
+            text-shadow: 0 2px 1px rgba(0,0,0,0.2);
+        }
+        .black:hover{
+            background-color: #777;
+        }
+
+        .sand{
+            background: #FFF090 url(images/buttonover2.png);
+            color: #fff;
+            letter-spacing: 3px;
+            text-shadow: 1px 0 1px rgba(0,0,0,0.2);
+        }
+        .sand:hover{
+            background-color: #F0C07F;
+        }
+
+        .violet{
+            background: #9400D3 url(images/buttonover2.png);
+            color: #777;
+            font-family:"Arial Black", Arial,sans-serif;
+            text-shadow: 0 1px 1px #fff;
+        }
+        .violet:hover{
+            background-color: #8A2BE2;
+        }
+
+        .green{
+            background: #32CD32 url(images/buttonover2.png);
+            color: #fff;
+            font-family:"Century Gothic",sans-serif;
+            text-transform:uppercase;
+            font-style:italic;
+            text-shadow: 1px 0 1px rgba(0,0,0,0.2);
+        }
+        .green:hover{
+            background-color: #2F4F4F;
+        }
+        .darkblue{
+            background: #00008B url(images/buttonover2.png);
+            color: #fff;
+            font-family:"Impact",sans-serif;
+            text-shadow: 1px 0 1px rgba(0,0,0,0.2);
+        }
+        .darkblue:hover{
+            background-color: #191970;
+        }
+        .sunset{
+            background: #FF6347 url(images/buttonover2.png);
+            color: #777;
+            font-family:"Palatino Linotype",sans-serif;
+            text-transform:uppercase;
+            text-shadow: 0 1px 1px #fff;
+        }
+        .sunset:hover{
+            background-color: #FF7F50;
+        }
+        .choco{
+            background: #D2691E url(images/buttonover2.png);
+            color: #fff;
+            font-family:"Gill Sans", sans-serif;
+            text-shadow: 1px 0 1px rgba(0,0,0,0.2);
+        }
+        .choco:hover{
+            background-color: #D2B48C;
+        }
+        .cadet{
+            background: #5F9EA0 url(images/buttonover2.png);
+            color: #fff;
+            font-family: "Arial Narrow", sans-serif;
+            text-shadow: 1px 0 1px rgba(0,0,0,0.2);
+        }
+        .cadet:hover{
+            background-color: #008080;
+        }
+        .aqua{
+            background: #00FFFF url(images/buttonover2.png);
+            color: #fff;
+            font-family: "Tahoma", sans-serif;
+            text-shadow: 1px 1px 4px #000;
+        }
+        .aqua:hover{
+            background-color: #00FFCC;
+        }
+
+    </style>
+</head>
+<!--re coded following html5 rules-->
+<body>
+<h1>20 fresh and colorful CSS3 buttons</h1>
+<img src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/uploads/2009/09/css3_buttons.png" alt="">
+<!-- example image from source site -->
+<hr>
+<div class="container">
+    <a href="#" class="button shadow">Cool Shadow</a>
+    <a href="#" class="button engraved">Dark Engraved</a>
+    <a href="#" class="button glow">Mystic Glow</a>
+    <a href="#" class="button white">Frozen White</a>
+    <a href="#" class="button red">Sexy Red</a>
+    <a href="#" class="button lightblue">Heavenly Blue</a>
+    <a href="#" class="button olive">Olive Outset</a>
+    <a href="#" class="button orange">Juicy Orange</a>
+    <a href="#" class="button pink">Lovely Pink</a>
+    <a href="#" class="button sea">Deep Sea</a>
+    <a href="#" class="button rose">Rose Vanity</a>
+    <a href="#" class="button black">Buttonize Gray</a>
+    <a href="#" class="button sand">Dreamy Sand</a>
+    <a href="#" class="button violet">Violent Violet</a>
+    <a href="#" class="button green">Grasshopper</a>
+    <a href="#" class="button darkblue">Ocean Blue</a>
+    <a href="#" class="button sunset">Golden Sunset</a>
+    <a href="#" class="button choco">Sweet Chocolate</a>
+    <a href="#" class="button cadet">Cadet Dreams</a>
+    <a href="#" class="button aqua">Aqua Love</a>
+</div>
+</body>
+</html>

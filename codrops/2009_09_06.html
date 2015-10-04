@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3: Creating Web Site Banners</title>
+    <style>
+        section h1,
+        section p{
+            padding: 0;
+            margin: 0;
+        }
+        section h1{
+            font-size: 36px;
+            line-height:100px;
+            text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+            width:310px;
+            float:left;
+        }
+        .slogan{
+            float: right;
+            margin:75px 20px 0 0;
+            font-size: 20px;
+        }
+        .banner{
+            width:620px;
+            height: 100px;
+            margin:7px auto;
+            -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            -moz-border-radius: 15px;
+            -webkit-border-radius: 15px;
+            border-radius: 15px;
+            padding-left: 190px;
+        }
+        /***/
+        .banner0{
+            background: #656964 url(images/banner0.png) no-repeat center left;
+        }
+        .banner1{
+            color:#37535B;
+            background: #31B3DA url(images/banner1.png) no-repeat center left;
+            font-family: "Arial Narrow", sans-serif;
+        }
+        .banner2{
+            color:#656A64;
+            background: #81C573 url(images/banner2.png) no-repeat center left;
+            font-family: "Palatino Linotype", sans-serif;
+        }
+        .banner3{
+            color:#37535B;
+            background: #656964 url(images/banner3.png) no-repeat center left;
+            font-family: "Arial Narrow", sans-serif;
+        }
+        .banner4{
+            color:#2B8EAC;
+            background: #656964 url(images/banner4.png) no-repeat center left;
+            font-family: "Century Gothic", sans-serif;
+        }
+        .banner4 .slogan{
+            color:#2b2b2b;
+        }
+        .banner5{
+            color:#37535B;
+            background: #C6CC10 url(images/banner5.png) no-repeat center left;
+            font-family: "Trebuchet MS", sans-serif;
+        }
+        .banner6{
+            color:#37535B;
+            background: #b8d8fb url(images/banner6.png) no-repeat center left;
+            font-family: "Arial Narrow", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+        .banner7{
+            color:#6e9cf9;
+            background: #a08c60 url(images/banner7.png) no-repeat center left;
+            font-family: "Arial Narrow", sans-serif;
+            font-style: italic;
+        }
+        .banner7 .slogan{color:#6e9cf9;
+            text-shadow: 0 -1px 1px rgba(0,0,0,0.99);}
+
+    </style>
+</head>
+<!--re coded following html5 rules-->
+<body>
+<h1>CSS3: Creating Web Site Banners</h1>
+<img src="http://codropspz.tympanus.netdna-cdn.com/codrops/wp-content/uploads/2009/09/banners.gif" alt="">
+<!-- example image from source site -->
+<hr>
+<section>
+    <div class="banner banner0"></div>
+    <div class="banner banner1">
+        <h1>Sweet City</h1>
+        <p class="slogan">there's a lot to discover in your town</p>
+    </div>
+    <div class="banner banner2">
+        <h1>Automobile</h1>
+        <p class="slogan">The true fan club</p>
+    </div>
+    <div class="banner banner3"></div>
+    <div class="banner banner4">
+        <h1>Arrow Shmallow</h1>
+        <p class="slogan">Best Services</p>
+    </div>
+    <div class="banner banner5">
+        <h1>Radio Header</h1>
+        <p class="slogan">Listen to the music!</p>
+    </div>
+    <div class="banner banner6">
+        <h1>Energizer</h1>
+        <p class="slogan">The Smarter Power</p>
+    </div>
+    <div class="banner banner7">
+        <h1>Brickyton</h1>
+        <p class="slogan">We build everything</p>
+    </div>
+</section>
+</body>
+</html>
